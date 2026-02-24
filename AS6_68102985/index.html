@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ร้านอาหารบ้านอร่อย</title>
+  <link rel="stylesheet" href="as6.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">บ้านอร่อย</div>
+  <ul>
+    <li><a href="#menu">เมนู</a></li>
+    <li><a href="#gallery">บรรยากาศ</a></li>
+    <li><a href="#contact">ติดต่อ</a></li>
+  </ul>
+</nav>
+
+<!-- ปุ่มตะกร้า -->
+<div class="cart-btn" onclick="toggleCart()">
+    <div class="overlay" id="overlay" onclick="closeCart()"></div>
+  🛒 <span id="cart-count">0</span>
+</div>
+
+<!-- ตะกร้า -->
+<div class="cart" id="cart">
+    <div class="cart-header">
+      <h3>ตะกร้าสินค้า</h3>
+      <span class="close-cart" onclick="closeCart()">✕</span>
+    </div>
+  
+    <div id="cart-items"></div>
+    <p class="total">รวม: <span id="total">0</span> บาท</p>
+    <button onclick="checkout()" class="primary-btn">สั่งซื้อ</button>
+  </div>
+
+<header class="hero">
+  <h1>อาหารอร่อย บรรยากาศอบอุ่น</h1>
+</header>
+
+<!-- เมนู -->
+<section id="menu">
+  <h2>เมนูแนะนำ</h2>
+  <div class="menu-grid">
+
+    <div class="menu-card">
+      <img src="pic/1-2-1.jpg">
+      <h3>ข้าวผัดทะเล</h3>
+      <p>120 บาท</p>
+      <button onclick="addToCart('ข้าวผัดทะเล',120)">เพิ่มลงตะกร้า</button>
+    </div>
+
+    <div class="menu-card">
+      <img src="pic/Tomyum.jpg">
+      <h3>ต้มยำกุ้ง</h3>
+      <p>180 บาท</p>
+      <button onclick="addToCart('ต้มยำกุ้ง',180)">เพิ่มลงตะกร้า</button>
+    </div>
+
+    <div class="menu-card">
+      <img src="pic/8b9d0b505b36fb55454db7bbf2797151.jpg">
+      <h3>สเต๊กหมู</h3>
+      <p>250 บาท</p>
+      <button onclick="addToCart('สเต๊กหมู',250)">เพิ่มลงตะกร้า</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- แกลเลอรี่ -->
+<section id="gallery">
+  <h2>บรรยากาศร้าน</h2>
+  <div class="gallery">
+    <img src="pic/w280.jpg" onclick="openModal(this.src)">
+    <img src="pic/photo1jpg.jpg" onclick="openModal(this.src)">
+    <img src="pic/011Rongros-min-1024x1024.webp" onclick="openModal(this.src)">
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+  <span onclick="closeModal()" class="close">&times;</span>
+  <img id="modal-img">
+</div>
+
+<!-- ติดต่อ -->
+<section id="contact">
+    <h2>ช่องทางการติดต่อ</h2>
+  
+    <div class="contact-card">
+      <p><strong>จัดทำโดย : </strong> 68102985 PONGKHUN YAMMA</p>
+      <p>📍 มหาวิทยาลัยศรีปทุม 2410/2 ถ.พหลโยธิน เขตจตุจักร กรุงเทพฯ 10900</p>
+  
+      <div class="contact-links">
+        <a href="https://line.me/ti/p/GAMW6vF23w" target="_blank">LINE</a>
+        <a href="https://www.instagram.com/kff3ww?igsh=MWE2bmJ4am5qbXQ3cQ%3D%3D&utm_source=qr/" target="_blank">Instagram</a>
+      </div>
+    </div>
+  </section>
+<script src="script.js"></script>
+</body>
+</html>
