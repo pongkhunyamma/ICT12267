@@ -1,0 +1,88 @@
+/* 1. ลบขอบขาวรอบตัวเว็บและห้ามมี Scrollbar */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* ลบขอบขาวที่ทำให้เลื่อนลงได้ */
+    font-family: 'Kanit', sans-serif; /* ถ้าอยากให้ฟอนต์สวยเหมือนในรูป */
+}
+
+/* 2. ตั้งค่าวิดีโอให้เต็มจอและอยู่หลังสุด */
+#myVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover; /* บังคับให้วิดีโอไม่เบี้ยวและเต็มพื้นที่ */
+}
+
+/* 3. จัดฟอร์มให้อยู่กึ่งกลางหน้าจอเป๊ะๆ */
+.form-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 450px;
+    z-index: 10;
+}
+
+/* 4. ทำให้การ์ดฟอร์มโปร่งใสแบบ Glassmorphism */
+.form-card {
+    background: rgba(255, 255, 255, 0.7) !important; /* ปรับเป็น 0.7 เพื่อให้ใสเห็นวิดีโอ */
+    border-radius: 15px;
+    border: none;
+    backdrop-filter: blur(8px); /* แถม: ทำให้วิดีโอหลังฟอร์มดูเบลอๆ สวยมาก */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* 5. ปรับสี Drop-down (Select) ตามที่คุณต้องการ */
+.form-select {
+    background-color: #0d6efd !important;   /* สีพื้นหลังน้ำเงิน Bootstrap */
+    color: white !important;                /* สีตัวอักษรขาว */
+    border: none;
+    font-weight: 500;
+}
+
+/* เปลี่ยนสีตัวเลือกข้างใน Drop-down ให้เป็นสีดำพื้นขาวเพื่อให้มองเห็นชัด */
+.form-select option {
+    color: black;
+    background-color: white;
+}
+
+/* 6. การตกแต่งปุ่ม Play และ Stop ด้านล่าง */
+.video-controls {
+    position: absolute;
+    bottom: 30px; /* ขยับขึ้นมาจากขอบนิดหน่อย */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 20;
+}
+
+.video-controls button {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: all 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.video-controls button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: scale(1.05); /* แถม: ให้ปุ่มขยายขึ้นนิดนึงตอนเอาเมาส์วาง */
+}
+
+/* สีขอบปุ่มแบบในรูปที่ 2 */
+.video-controls button:first-child { border-color: #ffc107; } /* ขอบเหลือง */
+.video-controls button:last-child { border-color: #dc3545; }  /* ขอบแดง */
