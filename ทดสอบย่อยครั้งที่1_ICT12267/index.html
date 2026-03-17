@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie Website</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar">
+
+<div class="logo">SPU SIT</div>
+
+<div class="menu-toggle" id="menu-toggle">☰</div>
+
+<ul class="nav-menu" id="nav-menu">
+
+<li class="dropdown">
+
+<a href="#">ภาพยนตร์</a>
+
+<ul class="dropdown-menu">
+
+<li><a href="#">Notting Hill</a></li>
+<li><a href="#">Forest Gump</a></li>
+<li><a href="#">Chungking Express</a></li>
+
+</ul>
+
+</li>
+
+<li><a href="#about">เกี่ยวกับเรา</a></li>
+<li><a href="#contact">ติดต่อเรา</a></li>
+
+</ul>
+
+</nav>
+
+
+<!-- Banner -->
+
+<section class="banner">
+
+<h1>CineVerse</h1>
+
+</section>
+
+
+
+<!-- Movies -->
+
+<section class="container">
+
+<h2>ภาพยนตร์แนะนำ</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="https://i.pinimg.com/474x/84/32/7f/84327fd055b228a1319c63cc27d4e0a3.jpg">
+
+<h3>Notting Hill</h3>
+
+<button onclick="openModal('m1')">ดูรายละเอียด</button>
+
+</div>
+
+
+<div class="card">
+
+<img src="https://i.pinimg.com/736x/d8/c8/a7/d8c8a7695573ea7c9a64c08460bd62ed.jpg">
+<h3>Forest Gump</h3>
+
+<button onclick="openModal('m2')">ดูรายละเอียด</button>
+
+</div>
+
+
+<div class="card">
+
+<img src="https://i.pinimg.com/736x/af/31/22/af3122719295ea0a259da4b44320d042.jpg">
+
+<h3>Chungking Express</h3>
+
+<button onclick="openModal('m3')">ดูรายละเอียด</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- Modal -->
+
+<div id="m1" class="modal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeModal('m1')">&times;</span>
+
+<img src="https://i.pinimg.com/474x/84/32/7f/84327fd055b228a1319c63cc27d4e0a3.jpg" class="modal-img">
+
+<h2>Notting Hill</h2>
+
+<p><b>ผู้กำกับ :</b> Roger Michell</p>
+<p><b>นักแสดง :</b> Hugh Grant , Julia Roberts</p>
+<p><b>เรื่องย่อ :</b> โรแมนติกคอมเมดี้</p>
+
+</div>
+
+</div>
+
+
+<div id="m2" class="modal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeModal('m2')">&times;</span>
+
+<img src="https://i.pinimg.com/736x/d8/c8/a7/d8c8a7695573ea7c9a64c08460bd62ed.jpg" class="modal-img">
+
+<h2>Forest Gump</h2>
+
+<p><b>ผู้กำกับ :</b> Robert Zemeckis</p>
+<p><b>นักแสดง :</b> Tom Hanks , Robin Wright</p>
+<p><b>เรื่องย่อ :</b>  ดราม่า-คอมเมดี้</p>
+
+</div>
+
+</div>
+
+
+<div id="m3" class="modal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeModal('m3')">&times;</span>
+
+<img src="https://i.pinimg.com/736x/af/31/22/af3122719295ea0a259da4b44320d042.jpg" class="modal-img">
+
+<h2>Chungking Express</h2>
+
+<p><b>ผู้กำกับ :</b> Wong Kar-wai</p>
+<p><b>นักแสดง :</b> Tony Leung Chiu-wai , Faye Wong</p>
+<p><b>เรื่องย่อ :</b> รักโรแมนติก-ดราม่า ผสมกลิ่นอายอาชญากรรม</p>
+
+</div>
+
+</div>
+
+
+
+<!-- About -->
+
+<section class="container" id="about">
+
+<h2>เกี่ยวกับเรา</h2>
+
+<p>
+
+เว็บไซต์นี้สร้างขึ้นเพื่อแนะนำภาพยนตร์ที่น่าสนใจ
+สำหรับผู้ที่ชื่นชอบการดูหนังและขอให้เพลิดเพลินกับหนังที่เราได้แนะนำ
+
+</p>
+
+</section>
+
+
+
+<!-- Contact -->
+
+<section class="container" id="contact">
+
+<h2>ติดต่อเรา</h2>
+
+<form>
+
+<input type="text" placeholder="ชื่อ-นามสกุล" required>
+
+<input type="email" placeholder="อีเมล" required>
+
+<textarea placeholder="ข้อความ"></textarea>
+
+<button type="submit">ส่งข้อมูล</button>
+
+</form>
+
+</section>
+
+
+
+<!-- Footer -->
+
+<footer>
+
+<p>© 2025 Movie By 68102985</p>
+
+<div class="social">
+
+<a href="https://www.facebook.com/share/1CWC4yFtr6/?mibextid=wwXIfr">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+</a>
+
+<a href="https://www.instagram.com/kff3ww?igsh=MWE2bmJ4am5qbXQ3cQ%3D%3D&utm_source=qr">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733558.png">
+</a>
+
+<a href="https://line.me/ti/p/GAMW6vF23w">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111498.png">
+</a>
+
+</div>
+
+</footer>
+
+
+
+<script>
+
+const toggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("nav-menu");
+
+toggle.onclick = function(){
+menu.classList.toggle("active");
+};
+
+function openModal(id){
+document.getElementById(id).style.display="block";
+}
+
+function closeModal(id){
+document.getElementById(id).style.display="none";
+}
+
+</script>
+
+</body>
+</html>
